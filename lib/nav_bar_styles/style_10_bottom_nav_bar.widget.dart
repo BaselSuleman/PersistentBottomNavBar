@@ -12,7 +12,7 @@ class _BottomNavStyle10 extends StatelessWidget {
       navBarEssentials.navBarHeight == 0
           ? const SizedBox.shrink()
           : AnimatedContainer(
-        width: isSelected ? navBarEssentials.selectedWidth : 50,
+        width: isSelected ? item.selectedItemWidth??120 : 50,
         height: height! / 1.5,
         duration: navBarEssentials.itemAnimationProperties.duration,
         curve: navBarEssentials.itemAnimationProperties.curve,
@@ -22,7 +22,7 @@ class _BottomNavStyle10 extends StatelessWidget {
           color: isSelected
               ? item.activeColorPrimary
               : navBarEssentials.backgroundColor.withOpacity(0),
-          borderRadius:  BorderRadius.all(Radius.circular(navBarEssentials.selectedBorderRadius??10)),
+          borderRadius:  BorderRadius.all(Radius.circular(item.selectedBorderRadius??10)),
         )
             : BoxDecoration(
           color: isSelected

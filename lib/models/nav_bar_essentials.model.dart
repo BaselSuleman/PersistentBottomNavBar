@@ -13,8 +13,6 @@ class _NavBarEssentials {
     required this.navBarItemsAlignment,
     this.selectedScreenBuildContext,
     this.navBarHeight = 0.0,
-    this.selectedWidth,
-    this.selectedBorderRadius,
   });
 
   final int selectedIndex;
@@ -28,8 +26,6 @@ class _NavBarEssentials {
   final BuildContext? selectedScreenBuildContext;
   final MainAxisAlignment navBarItemsAlignment;
   final EdgeInsets margin;
-  final double? selectedBorderRadius;
-  final double? selectedWidth;
 
   _NavBarEssentials copyWith({
     final int? selectedIndex,
@@ -51,16 +47,14 @@ class _NavBarEssentials {
         previousIndex: previousIndex ?? this.previousIndex,
         backgroundColor: backgroundColor ?? this.backgroundColor,
         items: items ?? this.items,
-        selectedBorderRadius: selectedBorderRadius,
-        selectedWidth: selectedWidth,
         onItemSelected: onItemSelected ?? this.onItemSelected,
         navBarHeight: navBarHeight ?? this.navBarHeight,
         padding: padding ?? this.padding,
         margin: margin ?? this.margin,
         itemAnimationProperties:
-        itemAnimationProperties ?? this.itemAnimationProperties,
+            itemAnimationProperties ?? this.itemAnimationProperties,
         selectedScreenBuildContext:
-        selectedScreenBuildContext ?? this.selectedScreenBuildContext,
+            selectedScreenBuildContext ?? this.selectedScreenBuildContext,
         navBarItemsAlignment: navBarItemsAlignment ?? this.navBarItemsAlignment,
       );
 }
